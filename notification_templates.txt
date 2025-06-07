@@ -1,0 +1,8 @@
+Match Found Email Template:
+---------------------------
+Subject: Congratulations! You have a New Match!
+Body: Dear {user_name}, you have a new match with {match_name}. Log in to check!
+
+Interest Accepted SMS Template:
+-------------------------------
+"Hi {user_name}, your interest was accepted by {match_name}! Visit your profile to start chatting."

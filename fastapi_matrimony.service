@@ -1,0 +1,12 @@
+[Unit]
+Description=Gunicorn instance to serve FastAPI Matrimony App
+After=network.target
+
+[Service]
+User=ubuntu
+Group=www-data
+WorkingDirectory=/home/ubuntu/backend_matrimony
+ExecStart=/usr/local/bin/gunicorn -k uvicorn.workers.UvicornWorker app.main:app --bind 0.0.0.0:8000 --workers 4
+
+[Install]
+WantedBy=multi-user.target
