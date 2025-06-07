@@ -13,7 +13,7 @@ app = FastAPI(
 )
 
 
-Base.metadata.create_all(bind=engine)
+#Base.metadata.create_all(bind=engine)
 
 # Allow CORS for all
 app.add_middleware(
