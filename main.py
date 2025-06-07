@@ -6,8 +6,12 @@ from app.database import engine, Base
 app = FastAPI(
     title="Matrimony Backend API",
     description="Fully production-grade API similar to Shaadi.com",
-    version="1.0.0"
+    version="1.0.0",
+    docs_url="/docs",
+    redoc_url="/redoc",
+    openapi_url="/openapi.json"
 )
+
 
 Base.metadata.create_all(bind=engine)
 
@@ -34,6 +38,9 @@ app.include_router(privacy.router)
 
 
 
-@app.get("/")
+
+
+
+@app.api_route("/", methods=["GET", "HEAD"])
 def root():
     return {"message": "Matrimony Backend is Live!"}
