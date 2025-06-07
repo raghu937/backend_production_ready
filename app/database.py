@@ -6,7 +6,7 @@ import os
 
 
 
-DATABASE_URL = os.getenv("postgresql://raghu937:supersecretpassword@dpg-shiny-cow-12345.render.com:5432/osabelaku_db")
+DATABASE_URL = os.getenv("postgresql://osabelaku_user:IAZ1ibJdEpNjtnbMSDkjXeu7ysb8gvgi@dpg-d1227k95pdvs73c941fg-a/osabelaku")
 
 
 engine = create_engine(
